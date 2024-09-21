@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NavBar</title>
+  <style>
+    html,body{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: #1a1a1a;
+    }
+
+    .nav1{
+        background-color: rgb(216, 211, 201);
+        padding: 5px 5px;
+        border: none;
+        height: 10vh;
+        width: 100vw;
+    }
+
+    .nav1 ul{
+        display: flex;
+        list-style-type: none;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+   
+    .nav1 a {
+        text-decoration: none;
+        color: rgb(31, 27, 27);
+        font-size: 21px;
+        padding: 10px 15px;
+        /* background-color: grey; */
+        position: relative;
+        
+    }
+
+    .nav1 a::after{
+        content: "";
+        height: 4px;
+        width: 100%;
+        background-color: blue;
+        position: absolute;
+        bottom: 0;        
+        left: 0;
+        transform: scaleX(0);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .nav1 a:hover::after{
+        transform: scaleX(1);
+    }
+
+    .nav1 a:hover{
+        color: rgb(224, 102, 102);
+    }
+
+    .nav1 button{
+        padding: 10px 15px;
+        font-size: 18px;
+        border-radius: 10px;
+        background-color: rgb(11, 194, 93);
+        color: white;
+        border: none;
+        cursor: pointer;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .nav1 button:hover{
+        transform: rotateX(180deg);
+    }
+
+
+
+  </style>
+</head>
+<body>
+  
+  <nav class="nav1">
+  <ul>
+  <li><a href="#">Home</a></li>
+  <li><a href="#">Contact</a></li>
+  <li><a href="#">About</a></li>
+  <button>Sign In</button>
+  </ul>
+  </nav>
+
+</body>
+</html>
